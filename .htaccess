@@ -2,7 +2,15 @@
     RewriteEngine On
     RewriteBase /bank-cms/
     
-    # Remove .php extension
+    # Don't rewrite if it's a real file or directory
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    
+    # Don't rewrite .php files
+    RewriteCond %{REQUEST_FILENAME} !\.php$ [NC]
+    
+    # Remove .php extension from URL rewriting
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=$1 [QSA,L]
