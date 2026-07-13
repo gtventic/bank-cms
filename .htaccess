@@ -7,10 +7,10 @@
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
     
-    # Don't rewrite .php files
-    RewriteCond %{REQUEST_FILENAME} !\.php$ [NC]
+    # Route /admin to admin.php without extension
+    RewriteRule ^admin/?$ admin.php [QSA,L]
     
-    # Remove .php extension from URL rewriting
+    # Route /contact, /about, etc. to index.php with page parameter
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=$1 [QSA,L]
