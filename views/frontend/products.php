@@ -310,22 +310,31 @@
         font-weight: bold;
     }
 
+    .nav-tabs {
+        border-bottom: 2px solid #e0e0e0;
+    }
+
     .nav-tabs .nav-link {
-        color: #667eea;
+        color: #333333 !important;
         border: none;
         border-bottom: 3px solid transparent;
         transition: all 0.3s ease;
+        font-weight: 500;
+        padding: 10px 20px;
+        margin-right: 5px;
     }
 
     .nav-tabs .nav-link:hover {
+        color: #667eea !important;
         border-bottom-color: #667eea;
+        background-color: #f5f5f5;
     }
 
     .nav-tabs .nav-link.active {
         background-color: transparent;
-        color: #667eea;
+        color: #667eea !important;
         border-bottom-color: #667eea;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     .product-details {
