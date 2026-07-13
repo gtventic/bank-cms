@@ -1,0 +1,13 @@
+# Bank CMS - Robots Configuration
+
+User-agent: *
+Disallow: /config/
+Disallow: /classes/
+Disallow: /admin.php
+Disallow: /admin/
+Disallow: /uploads/
+Allow: /uploads/carousel/
+Allow: /uploads/products/
+
+# Sitemaps
+Sitemap: https://bank.com/sitemap.xml
