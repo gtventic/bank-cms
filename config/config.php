@@ -139,7 +139,7 @@ function requireLogin() {
  */
 function requireAdmin() {
     if (!isAdmin()) {
-        redirect(APP_URL . '/admin', 'Access denied', 'danger');
+        redirect(APP_URL, 'Access denied. Admin privileges required.', 'danger');
     }
 }
 
